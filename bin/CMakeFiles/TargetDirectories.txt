@@ -1,0 +1,5 @@
+D:/zNN/bin/CMakeFiles/znn.dir
+D:/zNN/bin/CMakeFiles/edit_cache.dir
+D:/zNN/bin/CMakeFiles/rebuild_cache.dir
+D:/zNN/bin/src/CMakeFiles/edit_cache.dir
+D:/zNN/bin/src/CMakeFiles/rebuild_cache.dir
