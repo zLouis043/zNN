@@ -21,7 +21,6 @@ typedef struct nn{
 }ZN_NN;
 
 MZ_Matrix MZ_new_random_uniform_float_matrix(unsigned int rows, unsigned int cols, float n);
-//MZ_Matrix MZ_flatten_matrix(MZ_Matrix matrix, Direction dir);
 MZ_Matrix MZ_apply_function_to_matrix(MZ_Matrix source,double (*func)(double));
 MZ_Matrix MZ_softmax(MZ_Matrix matrix);
 void MZ_matrix_save(MZ_Matrix matrix, char* filename);
@@ -62,34 +61,6 @@ MZ_Matrix MZ_new_random_uniform_float_matrix(unsigned int rows, unsigned int col
     return result;
    
 }
-
-/*MZ_Matrix MZ_flatten_matrix(MZ_Matrix matrix, Direction dir){
-    MZ_Matrix result;
-
-    switch(dir){
-        case VERTICAL:{
-            result = MZ_alloc_matrix(matrix.rows * matrix.cols, 1);
-        }break;
-        case HORIZONTAL:{
-            result = MZ_alloc_matrix(1, matrix.rows * matrix.cols);
-        }break;
-    }
-
-    for(unsigned int i = 0; i < matrix.rows; i++){
-        for(unsigned int j = 0; j < matrix.cols; j++){
-            switch(dir){
-                case VERTICAL:{
-                    MZ_VALUE_OF_MAT_AT(result, i*matrix.cols + j, 0) = MZ_VALUE_OF_MAT_AT(matrix, i, j);
-                }break;
-                case HORIZONTAL:{
-                    MZ_VALUE_OF_MAT_AT(result, 0, i*matrix.cols + j) = MZ_VALUE_OF_MAT_AT(matrix, i, j);
-                }break;
-            }
-        }
-    }
-
-    return result;
-}*/
 
 MZ_Matrix MZ_apply_function_to_matrix(MZ_Matrix source,double (*func)(double)){
 
